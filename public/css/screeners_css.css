@@ -1,0 +1,146 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+    background-color: var(--background);
+    box-sizing: border-box;
+}
+
+:root
+{
+    --background: #EEEEEE;
+    --text: #121212;
+    --gainer: #009879;
+    --looser: #FF0000;
+}
+
+[data-theme="dark"] 
+{
+    --background: #121212;
+    --text: #EEEEEE;
+    --gainer: #009879;
+    --looser: #FF0000;
+}
+
+/*For top navigation bar*/
+@font-face {
+    font-family: 'Allerta-Stencil';
+    src:url('Allerta-Stencil.ttf.woff') format('woff'),
+        url('Allerta-Stencil.ttf.svg#Allerta-Stencil') format('svg'),
+        url('Allerta-Stencil.ttf.eot'),
+        url('Allerta-Stencil.ttf.eot?#iefix') format('embedded-opentype'); 
+        font-weight: normal;
+        font-style: normal;
+}
+h2, h3
+{
+    color: var(--text);
+}
+ul, ul a
+{
+    list-style-type: none;
+    color: var(--text);
+    text-decoration: none;
+    vertical-align: middle;
+    display: inline-block;
+}
+.one li
+{
+    display: inline-block;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.navi
+{
+    padding: 2%;
+    right: 33%;
+    margin-top: -2.5%;
+    padding-left: 20%;
+}
+.logo
+{
+    padding: 1.5%;
+    margin-top: -2.5%;
+}
+.login
+{
+    padding: 1.7%;
+    right: 0%;
+    margin-top: -2.5%;
+    padding-left: 18%;
+}
+
+
+
+/*For table*/
+table, table th, table td 
+{
+    margin-top: 2%;
+    border-collapse: collapse;
+}
+table
+{
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+table tr:first-child th:first-child 
+{ 
+    border-top-left-radius: 20px;
+}
+table tr:first-child th:last-child 
+{ 
+    border-top-right-radius: 20px; 
+}
+table th, table td
+{
+    padding: 1.3%;
+    color: var(--text);
+}
+table tr:nth-child(odd)
+{
+    background-color:#eee; 
+}
+#gainers th
+{
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+#losers th
+{
+    background-color: #FF0000;
+    color: #ffffff;
+    text-align: left;
+}
+table tr
+{
+    border-bottom: thin solid #dddddd;
+}
+table tr:nth-of-type(even)
+{
+    background-color: #f3f3f3;
+}
+#gainers tr:last-of-type
+{
+    border-bottom: 2px solid #009879;
+}
+#losers tr:last-of-type
+{
+    border-bottom: 2px solid #FF0000;
+}
+#gainers tr:not(:first-child):hover {
+    font-weight: bold;
+    color: var(--gainer);
+}
+#losers tr:not(:first-child):hover {
+    font-weight: bold;
+    color: var(--looser);
+}   
+.gainers, .losers
+{
+    margin: 5%;
+}

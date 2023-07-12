@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/search.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<title>Search stocks</title>
+</head>
+<body>
+	<div class="container">
+		<div class="one">
+			<ul class="logo">
+				<li><a href="landing_logout.html" style="font-family: 'Allerta-Stencil'; font-size: 25px;">VELOCITY</a></li>
+			</ul>
+			<ul class="navi" style="font-weight: 500; text-transform: uppercase; font-size: 15px; color: #171717;">
+				<li><a href="indices.html">Indices</a></li>	
+				<li><a href="screeners.html">Screeners</a></li>
+				<li><a href="calculator.html">Calculator</a></li>
+				<li><a href="news.html">News</a></li>
+			</ul>
+			<ul class="login" style="font-weight: 500; text-transform: uppercase; font-size: 15px; color: #171717;">
+				<li><a href="landingpage.html">Logout</a></li>
+			</ul>
+			<img onclick="toggle()" id="image" src="pictures\dark.svg" style="padding-top: 1%; cursor: pointer;">
+		</div><!-- End of one-->
+
+		<div class="stocks" id="ss">
+			<p id="se">Enter stock symbol :</p>
+			<input type="text" name="stock" id="sym">
+			<button onclick="show()">Search</button>
+			<br><br>
+			
+		</div>
+		<script type="text/javascript" src="search.js"></script>
+	</div>
+</body>
+</html>

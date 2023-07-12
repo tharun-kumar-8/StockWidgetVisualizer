@@ -1,0 +1,58 @@
+body
+{
+  background:url("https://i.pinimg.com/originals/72/a1/84/72a184aa7846cad0d5a82cf55dc3f406.jpg");
+  background-size:cover;
+}
+#tit{
+  text-align:left;
+  color:blue;
+  font-weight:10;
+  font-size:50px;
+}
+.form{
+  position:absolute;
+  top:20%;
+  bottom:40%;
+  left:60%;
+  border:1px solid grey;
+  margin:2px;
+  padding:15px;
+}
+input[type=text] { 
+  background: #d4f1f9; border: 0.5px solid black;
+  border-radius: 15px;
+  padding: 2px;
+}
+input[type=Password] { 
+  background: #d4f1f9; border: 0.5px solid black;
+  border-radius: 15px;
+  padding: 2px;
+}
+td {
+  color:black;
+  padding: 10px;
+  font-family:sans-serif;
+
+}
+#sig{
+  border-radius: 15px;
+  padding: 10px;
+  background:#98FB98;
+  align:center;
+}
+#sig1{
+  border-radius: 15px;
+  padding: 10px;
+  background:#ffcccb;
+  align:center;
+}
+.but{
+  position: absolute;
+  top: 85%;
+  left:30%; 
+}
+th{
+  color:#A5A3C1;
+  font-weight:8;
+  font-size:25px;
+}

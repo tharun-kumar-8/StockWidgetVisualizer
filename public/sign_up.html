@@ -1,0 +1,60 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Sign Up Form </title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
+<link rel="stylesheet" href="css/sign_up.css">
+</head>
+<body>
+<div ng-app="myapp" ng-controller="myctrl">
+<div class="sign-up-form">
+<img src="pictures/user_1.png">
+<h1> Sign Up Now </h1>
+<form name="f1" action="/sign_up" method="post">
+<input type="email" ng-model="email" id="email" name="email" class="input-box" placeholder="your email" required>
+<input type="password" ng-model="pass" id="pass" name="pass" class="input-box" placeholder="your password" required ng-pattern="/^(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,20}$/">
+<input type="password" id="repass" ng-model="repass" name="repass" class="input-box" placeholder="Re enter password" compare-to="pass" required>
+<div style="color:orange" ng-show="!f1.pass.$valid">Password should be at least 8 characters
+            long and should contain one number,one character and one special
+            character</div>
+<p><span><input type="checkbox" name="c" ng-model="c" required></span>I agree to the terms of services </p>
+<button type="submit" class="signup-btn" ng-click="check()" onclick="if(!this.form.c.checked){alert('Please agree the terms and conditions');return false}">Sign up</button>
+<hr>
+<p class="or">OR</p>
+<p class="already">Already a member? <a href="login.html">log in</p>
+</form>
+</div>
+</div>
+<script>
+var app=angular.module("myapp",[]);
+app.controller("myctrl",function($scope)
+{
+     $scope.email="";
+	 $scope.pass="";
+	 $scope.repass="";
+	 $scope.check=function()
+	 {
+	    var flag=0;
+		if($scope.email==""||$scope.pass==""||$scope.repass=="")
+		{
+		    alert("All fields are mandatory");
+			flag=1;
+			}
+		var em = /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6})*$/;	
+	    if (!$scope.email.match(em)) {
+         alert("Enter valid email id");
+         return false;
+         flag = 1;
+        }
+		var p=$scope.pass;
+		var q=$scope.repass;
+		if(p!=q)
+		{
+		  alert("The password doesn't match");
+        }	
+     }
+}); 
+</script>
+</body>
+</html>

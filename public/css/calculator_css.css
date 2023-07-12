@@ -1,0 +1,177 @@
+@font-face {
+    font-family: 'Allerta-Stencil';
+    src:url('Allerta-Stencil.ttf.woff') format('woff'),
+        url('Allerta-Stencil.ttf.svg#Allerta-Stencil') format('svg'),
+        url('Allerta-Stencil.ttf.eot'),
+        url('Allerta-Stencil.ttf.eot?#iefix') format('embedded-opentype'); 
+        font-weight: normal;
+        font-style: normal;
+}
+*
+{
+    margin: 0%;
+    padding: 0%;
+    background-color: var(--background);
+    box-sizing: border-box;
+}
+:root
+{
+    --background: #EEEEEE;
+    --text: #121212;
+    --hover: #ddd;
+    --active: #ccc;
+}
+
+[data-theme="dark"] 
+{
+    --background: #121212;
+    --text: #EEEEEE;
+    --hover: #36454F;
+    --active: #28282B;
+}
+h2, h3
+{
+    color: var(--text);
+}
+ul, ul a
+{
+    list-style-type: none;
+    color: var(--text);
+    text-decoration: none;
+    vertical-align: middle;
+    display: inline-block;
+}
+.one li
+{
+    display: inline-block;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.navi
+{
+    padding: 2%;
+    right: 33%;
+    margin-top: -2.5%;
+    padding-left: 20%;
+}
+.logo
+{
+    padding: 1.5%;
+    margin-top: -2.5%;
+}
+.login
+{
+    padding: 1.7%;
+    right: 0%;
+    margin-top: -2.5%;
+    padding-left: 18%;
+}
+
+.logo, .navi, .login
+{
+    
+    top: 0%;
+}
+
+#interest, #currency
+{
+    display: none;
+}
+
+#profit h3, #interest h3, #currency h3
+{
+    font-size: 180%;
+    font-family: 'Sora', sans-serif;
+    padding: 1%;
+    text-align: center;
+    padding-top: 2%;
+}
+#profit label, #interest label, #currency label
+{
+    display: block;
+    padding: 1%;
+    padding-left: 2%;
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+    font-size: 120%;
+}
+#profit input, #interest input, #currency input
+{
+    margin-left: 2%;
+    padding: 0.5%;
+    padding-right: 10%;
+}
+#result, #result1, #result2
+{
+    float: right;
+    padding-right: 6%;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 120%;
+}
+#profit button, #interest button, #currency button
+{
+    padding: 0.8%;
+    border-radius: 10%;
+    border: none;
+    background-color: #04AA6D;
+    color: white;
+    display: block;
+    margin-top: 1.5%;
+    margin-left: 2%;
+    font-size: 110%;
+    cursor: pointer;
+}
+.cals
+{
+    padding-top: 10%;
+    width: 80%;
+    margin: auto;
+}
+.tab {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: var(--background);
+  width: 30%;
+  height: 400px;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: var(--text);
+  padding: 5.5% 8%;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  /*transition: 0.3s;*/
+  font-size: 120%;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: var(--hover);
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: var(--active);
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0% 1%;
+  border: 1px solid #ccc;
+  width: 70%;
+  border-left: none;
+  height: 400px;
+  color: var(--text);
+}
+input
+{
+    color: var(--text);
+}
